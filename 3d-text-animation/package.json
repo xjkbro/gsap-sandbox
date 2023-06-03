@@ -1,0 +1,18 @@
+{
+  "name": "3d-text-animations",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.3.9"
+  },
+  "dependencies": {
+    "gsap": "^3.11.5",
+    "split-text-js": "^1.0.3"
+  }
+}

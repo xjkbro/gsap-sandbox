@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Animation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: coral;
+            box-sizing: border-box;
+        }
+
+        header {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 8rem;
+            text-transform: uppercase;
+            font-family: 'Passion One';
+            font-weight: 700;
+            overflow: hidden;
+            line-height: 6.1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="text">jkbro.dev</h1>
+    </header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
+        integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script>
+        const text = new SplitType("#text")
+        gsap.fromTo('.char', {
+            y: 115
+        }, {
+            duration: 0.3,
+            y: 0,
+            stagger: 0.05,
+            delay: .4,
+        })
+    </script>
+</body>
+
+</html>
