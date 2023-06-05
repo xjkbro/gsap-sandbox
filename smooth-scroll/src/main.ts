@@ -5,9 +5,10 @@ import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 
 const texts = gsap.utils.toArray("#first p");
+const timeline = gsap.timeline();
 texts.forEach((text) => {
     console.log(text);
-    gsap.fromTo(
+    timeline.fromTo(
         text,
         {
             clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
@@ -20,7 +21,8 @@ texts.forEach((text) => {
                 trigger: text,
                 start: "center 55%",
                 end: "center 45%",
-                scrub: 3,
+                scrub: true,
+                markers: true,
             },
         }
     );
