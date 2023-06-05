@@ -49,7 +49,7 @@ gsap.fromTo(
     { scale: 1 },
     { scale: 1.2, transformOrigin: "center", duration: 10 }
 );
-titles.forEach((title) => {
+titles.forEach((title: any) => {
     herotl.fromTo(
         title,
         { opacity: 0, y: 50 },
@@ -120,7 +120,7 @@ abouttl.fromTo(
 const aboutp = new SplitType("#about p", { types: "lines" });
 console.log(aboutp);
 
-aboutp?.lines?.forEach((line, i) => {
+aboutp?.lines?.forEach((line) => {
     abouttl.fromTo(
         line,
         { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)" },

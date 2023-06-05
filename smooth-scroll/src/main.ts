@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const texts = gsap.utils.toArray("#first p");
 const timeline = gsap.timeline();
-texts.forEach((text) => {
+texts.forEach((text: any) => {
     console.log(text);
     timeline.fromTo(
         text,
