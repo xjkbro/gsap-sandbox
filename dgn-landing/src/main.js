@@ -8,18 +8,18 @@ gsap.registerPlugin(ScrollTrigger);
 
 const entrytl = gsap.timeline();
 entrytl
-    // .fromTo(
-    //     "#loader svg",
-    //     {
-    //         opacity: 0,
-    //         scale: 0.5,
-    //     },
-    //     { opacity: 1, scale: 1, duration: 0.7, ease: "back" }
-    // )
-    // .to("#loader svg", {
-    //     scale: 0,
-    //     delay: 2,
-    // })
+    .fromTo(
+        "#loader svg",
+        {
+            opacity: 0,
+            scale: 0.5,
+        },
+        { opacity: 1, scale: 1, duration: 0.7, ease: "back" }
+    )
+    .to("#loader svg", {
+        scale: 0,
+        delay: 2,
+    })
     .to("#loader", {
         // translateX: "100%",
         opacity: 0,
