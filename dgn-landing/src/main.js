@@ -5,6 +5,27 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 
 gsap.registerPlugin(ScrollTrigger);
+
+const entrytl = gsap.timeline();
+entrytl
+    // .fromTo(
+    //     "#loader svg",
+    //     {
+    //         opacity: 0,
+    //         scale: 0.5,
+    //     },
+    //     { opacity: 1, scale: 1, duration: 0.7, ease: "back" }
+    // )
+    // .to("#loader svg", {
+    //     scale: 0,
+    //     delay: 2,
+    // })
+    .to("#loader", {
+        // translateX: "100%",
+        opacity: 0,
+        display: "none",
+    });
+
 const titles = gsap.utils.toArray("#hero h1 span");
 
 const navtl = gsap.timeline({
@@ -151,7 +172,6 @@ purposetl.fromTo(
     "#purpose",
     {
         opacity: 0.2,
-        y: -150,
     },
     {
         opacity: 1,
@@ -168,11 +188,21 @@ purposetl.fromTo(
     { opacity: 0, scale: 1.1, transformOrigin: "center" },
     { opacity: 1, scale: 1, duration: 0.4 }
 );
-const purposep = new SplitType("#purpose p", { types: "words" });
+const purposeps = document.querySelectorAll("#purpose p");
+console.log(purposeps);
+purposeps.forEach((p) => {
+    purposetl.fromTo(
+        p,
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 0.4 }
+    );
+});
+new SplitType("#purpose p.ghost", { types: "words" });
+const purposep = new SplitType("#purpose p.main", { types: "words" });
 // purposep.chars?.forEach((chars, i) => {
 purposetl.fromTo(
     purposep.words,
-    { opacity: 0, rotation: 30 },
+    { opacity: 0, rotation: 5 },
     {
         opacity: 1,
         rotation: 0,
@@ -187,7 +217,17 @@ ScrollTrigger.create({
     start: "top top",
     end: "+=4000",
     pin: true,
-    scrub: 1,
+    scrub: true,
 });
 // });
 // purposetl;
+
+gsap.fromTo(
+    "#community ul li",
+    { translateX: 0 },
+    {
+        translateX: "-50vw",
+        stagger: 0.5,
+        scrollTrigger: { trigger: "#community ul", scrub: true },
+    }
+);

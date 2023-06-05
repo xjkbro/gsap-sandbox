@@ -13,8 +13,8 @@
 </head>
 
 <body class="bg-black">
-  <div id="loader" class="h-screen w-full fixed bg-neutral-600 place-content-center hidden">
-    <svg class="w-full" viewBox="0 0 446 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <div id="loader" class="h-screen w-full fixed bg-neutral-600 place-content-center grid z-[10000]">
+    <svg class="w-full animate-pulse" viewBox="0 0 446 144" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M69.4 1.99999C91.9333 1.99999 109.933 6.86666 123.4 16.6C137 26.3333 143.8 41.4 143.8 61.8V82.2C143.8 103 137.067 118.2 123.6 127.8C110.267 137.267 92.2 142 69.4 142H5.6C4.13333 142 2.86667 141.467 1.8 140.4C0.733334 139.333 0.200001 138.067 0.200001 136.6V7.39999C0.200001 5.93333 0.733334 4.66666 1.8 3.59999C2.86667 2.53332 4.13333 1.99999 5.6 1.99999H69.4ZM70.4 103C76.6667 103 81.6 101.533 85.2 98.6C88.9333 95.5333 90.8 91.2667 90.8 85.8V58.2C90.8 52.7333 88.9333 48.5333 85.2 45.6C81.6 42.5333 76.6667 41 70.4 41H52.2V103H70.4ZM295.922 57.6C297.389 57.6 298.655 58.1333 299.722 59.2C300.789 60.2667 301.322 61.5333 301.322 63V84.2C301.322 104.467 294.389 119.533 280.522 129.4C266.789 139.133 248.589 144 225.922 144C203.255 144 184.989 139.133 171.122 129.4C157.389 119.533 150.522 104.333 150.522 83.8V60.2C150.522 46.6 153.855 35.3333 160.522 26.4C167.189 17.3333 176.189 10.6667 187.522 6.39999C198.855 2.13333 211.655 -7.62939e-06 225.922 -7.62939e-06C242.989 -7.62939e-06 257.055 2.79999 268.122 8.39999C279.189 14 287.189 20.3333 292.122 27.4C297.189 34.4667 299.722 40.2 299.722 44.6C299.722 45.8 299.255 46.8667 298.322 47.8C297.522 48.6 296.522 49 295.322 49H250.122C247.455 49 245.522 48.2667 244.322 46.8C240.189 41.6 234.055 39 225.922 39C219.789 39 214.655 40.4 210.522 43.2C206.522 46 204.522 49.6 204.522 54V88C204.522 93.3333 206.522 97.5333 210.522 100.6C214.522 103.533 219.655 105 225.922 105C234.189 105 240.255 103.6 244.122 100.8C248.122 97.8667 250.189 94.4667 250.322 90.6H237.922C236.455 90.6 235.189 90.0667 234.122 89C233.055 87.9333 232.522 86.6667 232.522 85.2V63C232.522 61.5333 233.055 60.2667 234.122 59.2C235.189 58.1333 236.455 57.6 237.922 57.6H295.922ZM440.444 1.99999C441.91 1.99999 443.177 2.53332 444.244 3.59999C445.31 4.66666 445.844 5.93333 445.844 7.39999V136.6C445.844 138.067 445.31 139.333 444.244 140.4C443.177 141.467 441.91 142 440.444 142H408.244C405.044 142 402.377 140.6 400.244 137.8L356.644 82.2V136.6C356.644 138.067 356.11 139.333 355.044 140.4C353.977 141.467 352.71 142 351.244 142H314.044C312.577 142 311.31 141.467 310.244 140.4C309.177 139.333 308.644 138.067 308.644 136.6V7.39999C308.644 5.93333 309.177 4.66666 310.244 3.59999C311.31 2.53332 312.577 1.99999 314.044 1.99999H346.444C349.644 1.99999 352.244 3.33333 354.244 6L397.844 66.2V7.39999C397.844 5.93333 398.377 4.66666 399.444 3.59999C400.51 2.53332 401.777 1.99999 403.244 1.99999H440.444Z"
         fill="white" />
@@ -43,20 +43,20 @@
       <div
         class="bg-gradient-to-b from-transparent via-transparent via-60% to-95% to-black h-full absolute z-10 w-full">
       </div>
-      <div class="absolute w-3/4 grid place-content-center drop-shadow-2xl -translate-y-24">
-        <h1 class="text-6xl font-bold flex flex-col"><span>DEGENERATE</span><span>GAMERS</span></h1>
-        <h3 class="text-2xl font-bold">A new way to play competitive gaming</h3>
+      <div class="absolute w-full grid place-content-center drop-shadow-2xl -translate-y-24 xl:-translate-x-24 ">
+        <h1 class="md:text-[6rem] xl:text-[9rem]font-bold flex flex-col mb-0">
+          <span class="leading-[0.9]">DEGENERATE</span>
+          <span class="leading-[0.9]">GAMERS</span>
+        </h1>
+        <h3 class="text-6xl font-bold">A new way to play competitive gaming</h3>
       </div>
     </section>
 
     <section id="about" class="min-h-screen w-full grid place-content-center relative">
       <img src="/image2.avif" alt="" class="object-cover object-left left-0"
         style="clip-path: polygon(0 0, 57% 0, 100% 100%, 0% 100%);">
-      <!-- <div class="flex items-center gap-4"> -->
-      <!-- <img src="/image2.avif" alt="" class="object-cover w-96 h-96 object-left" > -->
-
-      <div class="absolute h-full w-5/12 flex flex-col justify-center translate-x-[133%]">
-        <h2 class="text-neutral-700 uppercase font-black text-2xl mb-2">About us</h2>
+      <div class="absolute h-full w-1/2 flex flex-col justify-center translate-x-[90%]">
+        <h2 class="text-neutral-700 uppercase font-black text-5xl mb-2">About us</h2>
         <p class="text-4xl font-light uppercase">Lorem
           ipsum dolor,
           sit
@@ -69,27 +69,62 @@
           nostrum architecto a
           reiciendis?</p>
       </div>
-      <!-- </div> -->
     </section>
     <section id="purpose" class="min-h-screen relative">
-      <video autoplay muted loop id="purpose-video" class="object-cover h-screen object-center">
+      <video autoplay muted loop id="purpose-video" class="object-cover h-screen w-full object-center">
         <source src="/gamers.mp4" type="video/mp4">
       </video>
-      <div class="absolute flex flex-col justify-center items-center w-full h-full z-10 top-0 p-24 ">
+      <div class="absolute flex flex-col justify-center items-center w-full h-full z-10 top-0 p-24">
         <h2 class="text-[6rem] text-yellow-400">Purpose</h2>
-        <p class="text-5xl uppercase font-semibold">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat
-          voluptatibus
-          odio
-          perspiciatis tempora rem
-          quo officia nesciunt fugit accusantium eveniet, exercitationem reiciendis nam optio explicabo, error,
-          blanditiis
-          vero aliquid enim veniam rerum perferendis quasi beatae natus expedita? Perspiciatis, accusantium vero.</p>
+        <div class="relative">
+          <p class="text-5xl uppercase font-semibold absolute text-neutral-500/25 ghost">Lorem, ipsum dolor sit amet
+            consectetur
+            adipisicing elit.
+            Repellat
+            voluptatibus
+            odio
+            perspiciatis tempora rem
+            quo officia nesciunt fugit accusantium eveniet, exercitationem reiciendis nam optio explicabo, error,
+            blanditiis
+            vero aliquid enim veniam rerum perferendis quasi beatae natus expedita? Perspiciatis, accusantium vero.</p>
+          <p class="text-5xl uppercase font-semibold main">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Repellat
+            voluptatibus
+            odio
+            perspiciatis tempora rem
+            quo officia nesciunt fugit accusantium eveniet, exercitationem reiciendis nam optio explicabo, error,
+            blanditiis
+            vero aliquid enim veniam rerum perferendis quasi beatae natus expedita? Perspiciatis, accusantium vero.</p>
+        </div>
+      </div>
       </div>
     </section>
     <section id="community" class="min-h-screen p-24">
       <h2>Community</h2>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam reiciendis at in excepturi fugiat eius, eaque
         aliquid debitis quos commodi! Impedit voluptates recusandae temporibus.</p>
+      <ul class="flex gap-12 overflow-hidden">
+        <li class="min-w-[50vw] p-12 bg-neutral-700">
+          <h4>John Doe</h4>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas cupiditate non minima.</p>
+        </li>
+        <li class="min-w-[50vw] p-12 bg-neutral-700">
+          <h4>John Doe</h4>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas cupiditate non minima.</p>
+        </li>
+        <li class="min-w-[50vw] p-12 bg-neutral-700">
+          <h4>John Doe</h4>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas cupiditate non minima.</p>
+        </li>
+        <li class="min-w-[50vw] p-12 bg-neutral-700">
+          <h4>John Doe</h4>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas cupiditate non minima.</p>
+        </li>
+        <li class="min-w-[50vw] p-12 bg-neutral-700">
+          <h4>John Doe</h4>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas cupiditate non minima.</p>
+        </li>
+      </ul>
     </section>
     <section id="prestige" class="h-screen p-24">
       <h2>Prestige</h2>
