@@ -12,3 +12,8 @@ h2 {
 h3 {
     font-family: "DM Sans";
 }
+
+nav > ul {
+    font-family: "Rubik Mono One", "Roboto", sans-serif;
+    letter-spacing: -0.08em;
+}
