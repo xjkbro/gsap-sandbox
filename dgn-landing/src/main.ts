@@ -151,10 +151,16 @@ purposetl.fromTo(
     "#purpose",
     {
         opacity: 0.2,
-        y: -155,
+        y: -150,
     },
     {
         opacity: 1,
+        scrollTrigger: {
+            trigger: "#purpose",
+            scrub: 1,
+            start: "top 90%",
+            end: "top 30%",
+        },
     }
 );
 purposetl.fromTo(
@@ -170,6 +176,7 @@ purposetl.fromTo(
     {
         opacity: 1,
         rotation: 0,
+        transformOrigin: "left",
         stagger: 0.1,
         duration: 0.1,
     }
