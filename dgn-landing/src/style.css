@@ -4,16 +4,23 @@
 
 h1,
 h2 {
-    font-family: "Rubik Mono One", "Roboto", sans-serif;
-    font-weight: 400;
-    letter-spacing: -0.08em;
+	font-family: "Rubik Mono One", "Roboto", sans-serif;
+	font-weight: 400;
+	letter-spacing: -0.08em;
 }
 
 h3 {
-    font-family: "DM Sans";
+	font-family: "DM Sans";
 }
 
 nav > ul {
-    font-family: "Rubik Mono One", "Roboto", sans-serif;
-    letter-spacing: -0.08em;
+	font-family: "Rubik Mono One", "Roboto", sans-serif;
+	letter-spacing: -0.08em;
+}
+#loading-logo {
+	font-family: "Rubik Mono One", "Roboto", sans-serif;
+	letter-spacing: -0.08em;
+	line-height: 0.075;
+	font-size: 22vw;
+	color: white;
 }
