@@ -220,7 +220,13 @@
 		<section id="join" class="h-screen p-24">
 			<h2 class="text-[6rem] text-yellow-400  drop-shadow-md">Join</h2>
 			<div class="grid grid-cols-2 gap-12">
+
 				<form action="/submit.php" onsubmit="send" class="flex flex-col gap-4 mt-4">
+					<p>Lorem
+						ipsum dolor sit amet
+						consectetur
+						adipisicing
+						elit. Ab, a!</p>
 					<input class="w-full p-2 bg-neutral-700 " type="text" name="name" placeholder="Name">
 					<input class="w-full p-2 bg-neutral-700 " type="text" name="email" placeholder="Email">
 					<!-- <input class="w-full  bg-neutral-700 " type="file" name="resume" id="resume"> -->
@@ -228,14 +234,13 @@
 						rows="10"></textarea>
 					<button class="p-2 w-full hover:bg-neutral-700 transition-colors" type="submit">Apply</button>
 				</form>
-				<div>
-					<div id="sendnow" class="w-96 h-96 overflow-hidden object-cover object-center -translate-y-28">
+				<div class="relative">
+					<div id="sendnow" class=" overflow-hidden object-cover object-center -translate-y-28">
 
 					</div>
-					<p class="text-lg font-semibold text-center -translate-y-20">Lorem ipsum dolor sit amet consectetur
-						adipisicing
-						elit. Ab, a!
-					</p>
+					<!-- <div class="absolute text-lg font-semibold text-center top-0 w-full flex justify-center ">
+						<p class="w-80"></p>
+					</div> -->
 
 				</div>
 			</div>

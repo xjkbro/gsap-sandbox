@@ -637,21 +637,28 @@ export const createPrestigeTimeline = () => {};
 
 export const createJoinTimeline = () => {
 	const jointl = document.querySelector("#join");
-	const renderer = new THREE.WebGLRenderer({ alpha: true });
+	const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 	const send = document.querySelector("#sendnow");
 
 	// renderer.setSize(send.offestWidth, send.offsetHeight);
-	renderer.setSize(500, 600);
+	renderer.setSize(600, 600);
 	send.appendChild(renderer.domElement);
 
 	const scene = new THREE.Scene();
-	const camera = new THREE.PerspectiveCamera(75, 5 / 6, 0.1, 1000);
+	const camera = new THREE.PerspectiveCamera(80, 1, 0.1, 1000);
 	const axesHelper = new THREE.AxesHelper(9);
 	// scene.add(axesHelper);
 	// camera.position.set(1, 1, 1);
-	camera.lookAt(0, 0, 0);
+	// camera.lookAt(0, 0, 0);
 	let mixer;
 	// const controls = new OrbitControls(camera, renderer.domElement);
+	const controls = new OrbitControls(camera, renderer.domElement);
+	controls.target.set(0, 0, 0);
+	controls.update();
+	controls.enablePan = false;
+	controls.enableZoom = false;
+	// controls.en
+	controls.enableDamping = true;
 
 	const light = new THREE.AmbientLight(0x404040); // soft white light
 	const spotLight = new THREE.SpotLight(0xffffff);
@@ -663,6 +670,7 @@ export const createJoinTimeline = () => {
 		"./smol_ame_in_an_upcycled_terrarium_hololiveen.glb",
 		function (gltf) {
 			gb = gltf.scene;
+			gb.position.set(0, -1, 0);
 			scene.add(gb);
 			mixer = new THREE.AnimationMixer(gb);
 			const clips = gltf.animations;
@@ -678,11 +686,16 @@ export const createJoinTimeline = () => {
 	// function animate() {
 	// 	renderer.render(scene, camera);
 	// }
-	camera.position.set(2.7, 1.5, 4.5);
+	camera.position.set(2, 2, 4.5);
 	camera.lookAt(0, 0, 0);
 
 	// controls.update();
+	window.onresize = function () {
+		camera.aspect = 1;
+		camera.updateProjectionMatrix();
 
+		renderer.setSize(600, 600);
+	};
 	const clock = new THREE.Clock();
 	function animate() {
 		requestAnimationFrame(animate);
