@@ -667,7 +667,7 @@ export const createJoinTimeline = () => {
 	let gb;
 	assetLoader.load(
 		// "./gameboy_challenge.glb",
-		"./smol_ame_in_an_upcycled_terrarium_hololiveen.glb",
+		"./smol.glb",
 		function (gltf) {
 			gb = gltf.scene;
 			gb.position.set(0, -1, 0);
