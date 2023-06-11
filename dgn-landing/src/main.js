@@ -19,5 +19,5 @@ createAboutTimeline();
 createPurposeTimeline();
 createCommunityTimeline();
 // createPrestigeTimeline();
-createJoinTimeline();
+// createJoinTimeline();
 // createFooterTimeline();
