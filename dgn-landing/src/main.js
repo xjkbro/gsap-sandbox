@@ -12,7 +12,7 @@ import {
 	// createFooterTimeline,
 } from "./timelines";
 
-// createEntryTimeline();
+createEntryTimeline();
 createNavTimeline();
 createHeroTimeline();
 createAboutTimeline();
