@@ -708,3 +708,44 @@ export const createJoinTimeline = () => {
 	}
 	renderer.setAnimationLoop(animate);
 };
+
+export const createJoinTimeline2 = () => {
+	const joinform = document.querySelector("#join form");
+	const jointl = gsap.timeline();
+
+	const arr = gsap.utils.toArray(joinform.children);
+	arr.forEach((child) => {
+		jointl.fromTo(
+			child,
+			{ opacity: 0, x: -30 },
+			{
+				opacity: 1,
+				x: 0,
+				duration: 0.3,
+				scrollTrigger: {
+					trigger: child,
+					scrub: 1,
+					// pin: true,
+					start: "bottom 95%",
+					end: "bottom 90%",
+				},
+			}
+		);
+	});
+
+	gsap.fromTo(
+		"#join-side",
+		{ opacity: 0, y: 30 },
+		{
+			opacity: 1,
+			y: 0,
+			scrollTrigger: {
+				trigger: "#join-side",
+				scrub: true,
+				start: "center 85%",
+				end: "center 65%",
+				// markers: true,
+			},
+		}
+	);
+};

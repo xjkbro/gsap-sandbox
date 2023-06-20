@@ -221,7 +221,7 @@
 			<h2 class="text-[6rem] text-yellow-400  drop-shadow-md">Join</h2>
 			<div class="grid grid-cols-2 gap-12">
 
-				<form action="/submit.php" onsubmit="send" class="flex flex-col gap-4 mt-4">
+				<form action="" onsubmit="send" class="flex flex-col gap-4 mt-4">
 					<p>Lorem
 						ipsum dolor sit amet
 						consectetur
@@ -231,18 +231,24 @@
 					<input class="w-full p-2 bg-neutral-700 " type="text" name="email" placeholder="Email">
 					<!-- <input class="w-full  bg-neutral-700 " type="file" name="resume" id="resume"> -->
 					<textarea class="w-full p-2 bg-neutral-700 " name="message" id="message" cols="30"
-						rows="10"></textarea>
-					<button class="p-2 w-full hover:bg-neutral-700 transition-colors" type="submit">Apply</button>
+						placeholder="Your Message" rows="10"></textarea>
+					<button class="p-2 w-full hover:bg-neutral-600  bg-neutral-700 transition-colors"
+						type="submit">Apply</button>
 				</form>
-				<div class="relative">
-					<div id="sendnow" class=" overflow-hidden object-cover object-center -translate-y-28">
+				<div id="join-side">
+					<p class="rotate-[-5deg] translate-x-4 translate-y-4 text-lg">Become a Degenerate</p>
+					<img id="join-img" src="./image4.avif" alt="join img"
+						style="clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);">
+				</div>
+				<!-- <div class="relative"> -->
+				<!-- <div id="sendnow" class=" overflow-hidden object-cover object-center -translate-y-28"> -->
 
-					</div>
-					<!-- <div class="absolute text-lg font-semibold text-center top-0 w-full flex justify-center ">
+				<!-- </div> -->
+				<!-- <div class="absolute text-lg font-semibold text-center top-0 w-full flex justify-center ">
 						<p class="w-80"></p>
 					</div> -->
 
-				</div>
+				<!-- </div> -->
 			</div>
 
 		</section>
